@@ -1,0 +1,21 @@
+# IMPORTANT: Set this to false.
+demo: true
+
+# Theme customization is done on this file instead of _config.yml so that
+# you don't have to restart Jekyll to see changes.
+
+photo: "https://avatars0.githubusercontent.com/u/2410692?v=2&s=150"
+name: "Elle Kasai"
+copy: "I'm a product designer based in BC, Canada. I'm currently working for Actcat which makes a code reviewing service called SideCI (https://sideci.com/)."
+
+# Color scheme based on http://www.materialui.co/colors.
+# Possible values:
+# - default
+# - red
+# - pink
+# - brown
+# - blue
+# - purple
+# - teal
+# - green
+color: default

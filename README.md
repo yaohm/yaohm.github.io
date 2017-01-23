@@ -1,52 +1,115 @@
-# MAD4Jekyll - Theme for Jekyll 
+Unfortunately, this project is **no longer maintained**.
 
-> !!! Configured for **USER** pages !!!
+I now have other priorities in my life and no longer have time to update this library. Email me at elle.kasai@gmail.com if you'd like to reach me.
 
-## Welcome to MAD4Jekyll!
-     
+# :briefcase: ResumeCards :briefcase:
 
-### 'MAD4Jekyll' is a theme for [Jekyll](https://github.com/jekyll/)
+ResumeCards is a Markdown based resume generator. It looks great on mobile/desktop and can be saved as PDF.
 
-> The template has been revised as of August 27th, 2016.
+## :briefcase: Live Demo :briefcase:
 
-----------
+### [View Demo and Documentation](http://ellekasai.github.io/resumecards)
 
-> A big thank you to <a href="https://github.com/patmuk">Patrick Mukherjee</a> for his contribution on regenerating the code.
+![](http://cl.ly/image/3O342N0b0y1h/sample_default.png)
+
+You can save it as PDF too:
+
+![](http://cl.ly/image/091w0b0M2S3G/resume_print_preview.png)
+
+## :briefcase: Installation :briefcase:
+
+**Note:** ResumeCards uses Jekyll. Please read [Jekyll's documentation](http://jekyllrb.com/) if you get stuck.
+
+[Fork this repo](http://github.com/ellekasai/resumecard/fork), clone it, and then run:
+
+```
+bundle install
+```
+
+...which installs `github-pages` gem. After that, run the server:
+
+```
+jekyll serve --watch
+```
+### Warning
+
+* Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially. To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
+
+## :briefcase: Usage :briefcase:
+
+### Editing Your Resume
+
+Edit `_posts/card-[1-9].md` like this:
+
+```markdown
+---
+type: "Work Experience"
+heading: "Bizreach"
+subheading: "Junior Product Designer"
+duration: "October 2013 – September 2014 (1 year)"
+location: "Tokyo, Japan"
+---
+
+Write in markdown here...
+```
+
+If you don't need some of the metadata, just remove them:
+
+```markdown
+---
+type: "Work Experience"
+heading: "Bizreach"
+---
+```
+
+### Other Files to Modify
+
+You **should** change these files before deploying:
+
+* `_config.yml`: You must change `baseurl`and `url`.
+  * Make sure to restart the server after you update `_config.yml`.
+* `_data/resume.yml`: You must change `photo`, `name` and `url`. Also, you must set `demo` to `false` to hide everything but your resume.
+* `CNAME`: Change this to host ResumeCards on a custom domain.
+* `README.md`: Write your own README!
+* `_includes/script.html`: Extra stuff before the `</body>` tag. Change or remove the default Google Analytics code.
+* `_includes/nav.html`: Modify or remove your contact links.
+
+### Customize the Theme
+
+To customize the color theme, edit the `color` section of `_data/resume.yml`.
+
+#### Red
+![](http://cl.ly/image/0Q442g393E0O/sample_red.png)
+
+#### Pink
+![](http://cl.ly/image/2r0d3C201Q2y/sample_pink.png)
+
+#### Brown
+![](http://cl.ly/image/1A3p0v2n2I2O/sample_brown.png)
+
+#### Blue
+![](http://cl.ly/image/102r3e1y010w/sample_blue.png)
+
+#### Purple
+![](http://cl.ly/image/130Y2y1X1228/sample_purple.png)
+
+#### Teal
+![](http://cl.ly/image/3L042k3L3i2m/sample_teal.png)
+
+#### Green
+![](http://cl.ly/image/031u3a070V3f/sample_green.png)
+
+## :briefcase: Author & License :briefcase:
+
+Elle Kasai
+
+- [Website](http://ellekasai.com/about)
+- [Twitter](http://twitter.com/ellekasai)
+
+[MIT License](http://ellekasai.mit-license.org).
+
+## :briefcase: Special Thanks :briefcase:
+
+* [Shu Uesugi](http://github.com/chibicode) - for the guidance on this project.
 
 
-### It is based on [Clean Blog](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/) theme by [Start Bootstrap](http://startbootstrap.com/).
-
-     
-#  Homepage  
-
-#### Header Image
-
-#### A brief description
-
-#### A slider (it is turned off by default, since there is a also a separate section for a gallery)
-
-#### Contact Info
-            
-
-#  Navbar 
-
-#### A logo on the left side
- 
-#### 3 Pages for <a href="{{ site.baseurl }}/writing/">'blogging'</a>, <a href="{{ site.baseurl }}/gallery/">'gallery sliders'</a>, <a href="{{ site.baseurl }}/about/">'about'</a>.
-       
-
-#####  Search page, with all the tags and categories at the bottom
-
-##### Footnotes poping up.
-
->## !!! IMPORTANT !!! Before You Begin
->
->####  Set the **_config.yml** file, with your personal info!
-
-## What's Included
-
-#### A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
-
-#### A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
-
-#### You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
