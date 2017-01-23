@@ -1,92 +1,63 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Site Info
+title: Codinfox Lanyon
+tagline: 'A Jekyll theme based on Lanyon'
+description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+baseurl: "/lanyon"
+url: http://codinfox.github.io
+logo: '/public/logo.png'
 
-# Site settings
-title: Yummy Theme # ex. I m Chuan
-name: Your Name # ex. DONGChuan
-email: my_email_address@lalala.com
-location: My location # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
-github_url: my_github_url # ex. https://github.com/DONGChuan
-description: description_of_your_web_site
-favicon: favicon.png # Image must be in assets/images
-repository: github_username/github_username.github.io # ex. DONGChuan/DONGChuan.github.io
-
-# The base hostname & protocol for your site
-# For local test, please use http://localhost:4000
-# For production, use your github page url. ex. http://dongchuan.github.io
-url: http://localhost:4000
-
-## Gem
+# Site configurations
 gems:
   - jekyll-paginate
-  - jekyll-geo-pattern
-  - rouge
-  - kramdown
-  - jekyll-github-metadata
-
-# Build settings
 markdown: kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-
-source:      .
-destination: ./_site
-
-quiet:    false
-defaults: []
-
 kramdown:
   input: GFM
-  enable_coderay: true
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
 
-# Disque
-disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
+version: 1.0.0
 
-# Pagination
-paginate: 10
-paginate_path: 'page:num'
+# About/contact
+author:
+  name: Codinfox
+  description: A passionate <strong>developer and researcher</strong>, learning to be a giant.
+  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/lizhihao
+    github:    https://github.com/codinfox
+    # facebook:  <hide>
+    twitter:   https://twitter.com/Li_Zhihao
+    weibo:     http://weibo.com/41173780
+    email:     http://www.google.com/recaptcha/mailhide/d?k=01I3lZFiZYng9N3QxYEtsDaQ==&c=31wAnZkuKqcG0ATAqJN8Z3ln5kkYLA9TwkGc-IbygpM=
 
-# Navigation. If you do not like these modules, just remove them :D
-navs:
-  -
-    href: /
-    label: Home
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  About:          
+    - '/about/'
+  Github Project: 
+    - 'http://codinfox.github.io/'
 
-  -
-    href: /open-source
-    label: Open-Source
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
 
-  -
-    href: /blog
-    label: Blog
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
 
-  -
-    href: /bookmark
-    label: Bookmark
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
 
-  -
-    href: /about
-    label: About
-
-# Sidebar to show popular repo
-side_bar_repo_limit: 5 # Number of repos to show
-
-# Google Analytics
-analytics :
-  provider : google
-  google :
-      tracking_id : 'tracking_id'  # ex. UA-72165600-X
-
-
-# For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
